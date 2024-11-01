@@ -2,7 +2,7 @@
 int main(){
     int start,end;
     printf("Enter the start and end of the range");
-    scanf("%d %d",start,end);
+    scanf("%d %d",&start,&end);
     int i,j,prime;
     printf("Prime numbers are:");
     for(i=start;i<=end;i++){
@@ -12,11 +12,11 @@ int main(){
             continue;
         }
         for(j=2;j<i;j++){
-            if(i%j!=0){
-                prime= i;
+            if(i%j==0){
+                continue;
             }
         }
-        printf("%d", prime);
+        printf("%d", i);
     }
     return 0;
 }
